@@ -1,0 +1,109 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.fis.bewerbungtest</groupId>
+		<artifactId>bewerbungtest</artifactId>
+		<version>1.0.0</version>
+	</parent>
+
+	<artifactId>bewerbungtest-cloud-web</artifactId>
+	<packaging>war</packaging>
+	<description>OData-Service für Zugriffsmöglichkeiten auf die DB und SAPUI5-App als User Interface</description>
+
+	<dependencies>
+		<dependency>
+			<groupId>de.fis.bewerbungtest</groupId>
+			<artifactId>bewerbungtest-cloud-jpa</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+
+		<!-- SAP HANA Cloud SDK dependencies -->
+		<dependency>
+			<groupId>com.sap.cloud</groupId>
+			<artifactId>neo-javaee6-wp-api</artifactId>
+			<version>${sap.cloud.sdk.version}</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- OLINGO -->
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-api</artifactId>
+			<version>${olingo.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-core</artifactId>
+			<version>${olingo.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-jpa-processor-api</artifactId>
+			<version>${olingo.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-api-annotation</artifactId>
+			<version>${olingo.version}</version>
+			<scope>compile</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.olingo</groupId>
+			<artifactId>olingo-odata2-jpa-processor-core</artifactId>
+			<version>${olingo.version}</version>
+			<scope>runtime</scope>
+		</dependency>
+
+		<!-- Servlet -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>compile</scope>
+		</dependency>
+
+		<!-- Necessary -->
+		<dependency>
+			<groupId>org.apache.cxf</groupId>
+			<artifactId>cxf-rt-frontend-jaxrs</artifactId>
+			<version>2.7.5</version>
+		</dependency>
+
+		<!-- File Upload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.2</version>
+		</dependency>
+
+		<!-- HTTP -->
+		<!-- <dependency> <groupId>org.apache.httpcomponents</groupId> <artifactId>httpclient</artifactId> 
+			<version>4.3.5</version> <scope>compile</scope> </dependency> <dependency> 
+			<groupId>org.apache.httpcomponents</groupId> <artifactId>httpcore</artifactId> 
+			<version>4.3.2</version> <scope>compile</scope> </dependency> -->
+
+		<!-- PDF -->
+		<!-- <dependency> <groupId>org.apache.chemistry.opencmis</groupId> <artifactId>chemistry-opencmis-commons-impl</artifactId> 
+			<version>0.13.0</version> </dependency> <dependency> <groupId>org.apache.chemistry.opencmis</groupId> 
+			<artifactId>chemistry-opencmis-commons-api</artifactId> <version>0.13.0</version> 
+			</dependency> <dependency> <groupId>org.apache.chemistry.opencmis</groupId> 
+			<artifactId>chemistry-opencmis-client-api</artifactId> <version>0.13.0</version> 
+			</dependency> <dependency> <groupId>org.apache.chemistry.opencmis</groupId> 
+			<artifactId>chemistry-opencmis-client-impl</artifactId> <version>0.13.0</version> 
+			<exclusions> <exclusion> <artifactId> chemistry-opencmis-client-bindings 
+			</artifactId> <groupId>org.apache.chemistry.opencmis</groupId> </exclusion> 
+			</exclusions> </dependency> <dependency> <groupId>org.apache.pdfbox</groupId> 
+			<artifactId>pdfbox-app</artifactId> <version>1.8.10</version> </dependency> -->
+
+		<!-- Others -->
+		<!-- <dependency> <groupId>org.slf4j</groupId> <artifactId>slf4j-log4j12</artifactId> 
+			<version>1.7.1</version> </dependency> -->
+		<!-- <dependency> <groupId>org.codehaus.jettison</groupId> <artifactId>jettison</artifactId> 
+			<version>1.3.2</version> <scope>test</scope> </dependency> -->
+	</dependencies>
+
+</project>
